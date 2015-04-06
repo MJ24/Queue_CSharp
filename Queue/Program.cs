@@ -10,18 +10,36 @@ namespace Queue
     {
         static void Main(string[] args)
         {
-            //IQueue<int> queue = new CSeqQueue<int>(4);
-            CSeqQueue<int> queue = new CSeqQueue<int>(4);
+            LinkQueue<int> queue = new LinkQueue<int>();
+            //CSeqQueue<int> queue = new CSeqQueue<int>(4);
+            MyPrint(queue);
             queue.Out();
+            MyPrint(queue);
             queue.In(1);
+            MyPrint(queue);
             queue.In(2);
+            MyPrint(queue);
             queue.In(3);
+            MyPrint(queue);
             queue.In(4);
+            MyPrint(queue);
             queue.In(5);
+            MyPrint(queue);
             queue.Out();
+            MyPrint(queue);
             queue.In(5);
+            MyPrint(queue);
             queue.Out();
+            MyPrint(queue);
             queue.In(6);
+            MyPrint(queue);
+        }
+        private static void MyPrint(IQueue<int> queue)
+        {
+            Console.WriteLine();
+            Console.WriteLine("***start***");
+            queue.Print();
+            Console.WriteLine("####end####");
         }
     }
 }

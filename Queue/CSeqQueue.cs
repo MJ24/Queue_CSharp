@@ -129,5 +129,31 @@ namespace Queue
             }
             return result;
         }
+
+        public void Print()
+        {
+            if (rear == front)
+            {
+                Console.WriteLine("链队列为空！");
+            }
+            else if (rear > front)
+            {
+                for (int i = front; i < rear; i++)
+                {
+                    Console.WriteLine(data[i]);
+                }
+            }
+            else
+            {
+                for (int i = front; i < maxSize; i++)
+                {
+                    Console.WriteLine(data[i]);
+                }
+                for (int i = 0; i < rear; i++)
+                {
+                    Console.WriteLine(data[i]);
+                }
+            }
+        }
     }
 }

@@ -14,5 +14,6 @@ namespace Queue
         void In(T elem);
         T Out();
         T GetFront();
+        void Print();
     }
 }
